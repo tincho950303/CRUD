@@ -1,6 +1,9 @@
+/* Box sizing para todos los elementos */
 * {
     box-sizing: border-box;
 }
+
+/* Estilos generales del body */
 body {
     background: #f3f3f3;
     font-family: 'Poppins', Arial, sans-serif;
@@ -8,27 +11,28 @@ body {
     padding: 0;
 }
 
+/* Enlaces */
 a {
     color: #cbd5dd;
     text-decoration: none;
 }
 
+/* Barra de navegación */
 nav {
-    max-width: 900px;    
-    background: #1c313d;    
+    background: #1c313d;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
     padding: 30px;
 }
 
+/* Títulos */
 h1, h2 {
     color: #333;
     margin-bottom: 24px;
     text-align: center;
 }
 
-
-
-button, .btn {
+/* Botones */
+button, .btn, input[type="submit"] {
     font-size: 15px;
     background-color: #FABD44;
     color: #222;
@@ -42,11 +46,15 @@ button, .btn {
     display: inline-block;
 }
 
-button:hover, .btn:hover {
+button:hover, .btn:hover, input[type="submit"]:hover {
     background: #009BFF;
     color: #fff;
+    box-shadow: 0 0 8px rgba(0,123,255,0.3);
+    transition: background-color 0.5s ease;
+    outline: none;
 }
 
+/* Etiquetas */
 label {
     font-size: 16px;
     color: #222;
@@ -54,26 +62,26 @@ label {
     display: block;
 }
 
-/* Estilos generales para el main */
+/* Contenedor principal */
 main {
     max-width: 480px;
     margin: 40px auto;
     padding: 24px 32px;
-    background: #ffffff;
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Contenedor de cada campo */
+/* Contenedor de campos del formulario */
 .form-group {
     margin-bottom: 20px;
 }
 
-
+/* Inputs y textarea */
 input[type="text"],
-input[type="submit"],
-textarea {
+textarea,
+.horario {
     width: 100%;
     padding: 14px 18px;
     font-size: 16px;
@@ -81,26 +89,21 @@ textarea {
     border-radius: 8px;
     background-color: #fafafa;
     resize: vertical;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease,  background-color 0.5s ease;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.5s ease;
 }
 
-/* Placeholder con color gris suave */
+/* Placeholder */
 input::placeholder,
 textarea::placeholder {
     color: #999;
     font-style: italic;
 }
 
-/* Efecto al enfocar el campo */
-input[type="submit"]:hover {
-    color: #fff;
-    background-color: #1c313d;   
-    outline: none;
-    box-shadow: 0 0 8px rgba(0,123,255,0.3);
-    transition: background-color 0.5s ease;
-}
+/* Efecto al enfocar campos */
 input[type="text"]:focus,
-
 textarea:focus {
     border-color: #1c313d;
     background-color: #fff;
@@ -108,9 +111,8 @@ textarea:focus {
     box-shadow: 0 0 8px rgba(0,123,255,0.3);
 }
 
-/* Tamaño y altura del textarea */
+/* Tamaño del textarea */
 textarea {
     min-height: 120px;
     max-height: 220px;
 }
-

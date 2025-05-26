@@ -8,6 +8,10 @@
             <div class="form-group">
                 <textarea name="descripcion" id="" placeholder="Agrega una descripción"></textarea>               
             </div>
+            <div class="form-group">
+                <input class= "horario" type="time" name="hora-inicio" id="">
+                
+            </div>
             <input type="submit" value="Guardar" name="guardar_tarea">
         </form>
     </main>
