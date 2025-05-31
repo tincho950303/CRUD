@@ -24,6 +24,10 @@
                     <h2><?php echo $row['titulo'] ?></h2>
                     <p><?php echo $row['descripcion'] ?></p>
                     <p><?php echo $row['fecha'] ?></p>
+                    <div class="botones">
+                        <button><a href="editar_tarea.php?id=<?php echo $row['id']?>">📝</a></button>
+                        <button><a href="editar_tarea.php?id=<?php echo $row['id']?>">📝</a></button>                        
+                    </div>
                 </div>                                
 
         <?php }?>

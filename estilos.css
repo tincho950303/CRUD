@@ -14,8 +14,9 @@ body {
 
 /* Enlaces */
 a {
-    color: #cbd5dd;
+    color: #11d7e9;
     text-decoration: none;
+    font-size: 25px;
 }
 
 /* Barra de navegación */
@@ -36,8 +37,8 @@ h1, h2 {
 /* Botones */
 button, .btn, input[type="submit"] {
     font-size: 15px;
-    background-color: #FABD44;
-    color: #222;
+    background-color: #35a0e7;
+    color: #fff;
     padding: 8px 18px;
     border: none;
     border-radius: 5px;
@@ -141,7 +142,7 @@ textarea {
 }
 
 .tareas-container .caja-tarea {
-  background: #3ff5a044;
+  
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.06), 0 1.5px 4px rgba(0,0,0,0.02);
   padding: 24px 20px;
@@ -155,29 +156,23 @@ textarea {
 }
 
 .tareas-container .caja-tarea:hover {
+  background: #3ff5a044;
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 8px 24px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.06);
 }
 
-.caja-tarea h2, .caja-tarea h3 {
-  color: #22545a;
-  font-weight: 600;
-  margin-bottom: 8px;
-  font-size: 1.25rem;
+.tareas-container .botones {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: separate;
 }
 
-.caja-tarea p {
-  color: #444;
-  margin-bottom: 8px;
-  font-size: 1rem;
-  line-height: 1.5;
-}
 
-.caja-tarea time {
-  color: #888;
-  font-size: 0.95rem;
-  margin-top: 6px;
-}
+
+
+
 
 @media (max-width: 600px) {
   .tareas-container {
