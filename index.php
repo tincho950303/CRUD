@@ -16,21 +16,24 @@
         
    
     <div class="tareas-container">
-     <?php $query = "SELECT * FROM tareas";
+     <?php $query = "SELECT titulo, descripcion, fecha, DATEDIFF(NOW(), fecha) AS dias_pasados FROM tareas";
         $resultado_tareas = mysqli_query($conexion,$query);
             
             while ($row = mysqli_fetch_array($resultado_tareas)) { ?>
                 <div class="caja-tarea">
+                    <p class="dias">Días <?php echo $row['dias_pasados'] ?></p>
                     <h2><?php echo $row['titulo'] ?></h2>
                     <p><?php echo $row['descripcion'] ?></p>
                     <p><?php echo $row['fecha'] ?></p>
+                    
                     <div class="botones">
-                        <button><a href="editar_tarea.php?id=<?php echo $row['id']?>">📝</a></button>
-                        <button><a href="editar_tarea.php?id=<?php echo $row['id']?>">🗑️</a></button>                        
+                             
                     </div>
-                </div>                                
-
-        <?php }?>
+                </div>
+                
+                
+                <?php }?>
+                
     </div>  
      </main>  
 
