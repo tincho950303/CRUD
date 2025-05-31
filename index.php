@@ -10,34 +10,24 @@
             <div class="form-group">
                 <textarea name="descripcion" id="" placeholder="Agrega una descripción"></textarea>               
             </div>            
-            <div class="form-group">
-                <input class= "horario" type="time" name="hora-final" id="">                
-            </div>
+            
             <input type="submit" value="Guardar" name="guardar_tarea">
         </form>
+        
+   
+    <div class="tareas-container">
+     <?php $query = "SELECT * FROM tareas";
+        $resultado_tareas = mysqli_query($conexion,$query);
+            
+            while ($row = mysqli_fetch_array($resultado_tareas)) { ?>
+                <div class="caja-tarea">
+                    <h2><?php echo $row['titulo'] ?></h2>
+                    <p><?php echo $row['descripcion'] ?></p>
+                    <p><?php echo $row['fecha'] ?></p>
+                </div>                                
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Titulo</th>
-                    <th>Descripción</th>
-                    <th>Fecha</th>                    
-                </tr>
-            </thead>
-            <tbody>
-                <?php $query = "SELECT * FROM tareas";
-                $resultado_tareas = mysqli_query($conexion,$query);
-                
-                while ($row = mysqli_fetch_array($resultado_tareas)) { ?>
-                    <tr>
-                        <td><?php echo $row['titulo'] ?></td>
-                        <td><?php echo $row['descripcion'] ?></td>
-                        <td><?php echo $row['fecha'] ?></td>
-                    </tr>                                 
-
-             <?php }?>
-            </tbody>
-        </table>
-    </main>
+        <?php }?>
+    </div>  
+     </main>  
 
 <?php include 'includes\footer.php'?>
