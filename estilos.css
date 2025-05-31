@@ -9,6 +9,7 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: grid;
 }
 
 /* Enlaces */
@@ -116,3 +117,36 @@ textarea {
     min-height: 120px;
     max-height: 220px;
 }
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 80px;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #e6b514;
+  font-weight: bold;
+}
+
+
+
+tr:hover {
+  background-color: #e2e2e2;
+  cursor: pointer;
+  transition: background-color .3s ease-out;
+}
+
+td.price {
+  color: #007bff;
+  font-weight: bold;
+}
+
