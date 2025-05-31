@@ -9,12 +9,14 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: grid;
 }
 
 /* Enlaces */
 a {
-    color: #cbd5dd;
+    color: #11d7e9;
     text-decoration: none;
+    font-size: 25px;
 }
 
 /* Barra de navegación */
@@ -26,16 +28,17 @@ nav {
 
 /* Títulos */
 h1, h2 {
-    color: #333;
-    margin-bottom: 24px;
-    text-align: center;
+    color: #033f4e;
+    margin-bottom: 14px;
+    font-weight: 300;
+    
 }
 
 /* Botones */
 button, .btn, input[type="submit"] {
     font-size: 15px;
-    background-color: #FABD44;
-    color: #222;
+    background-color: #35a0e7;
+    color: #fff;
     padding: 8px 18px;
     border: none;
     border-radius: 5px;
@@ -64,7 +67,10 @@ label {
 
 /* Contenedor principal */
 main {
-    max-width: 480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: fit-content;
     margin: 40px auto;
     padding: 24px 32px;
     background: #fff;
@@ -73,9 +79,14 @@ main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 /* Contenedor de campos del formulario */
+form {
+    margin-right: 5%;
+}
 .form-group {
     margin-bottom: 20px;
+    
 }
 
 /* Inputs y textarea */
@@ -116,3 +127,65 @@ textarea {
     min-height: 120px;
     max-height: 220px;
 }
+
+
+
+.tareas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.tareas-container .caja-tarea {
+  
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06), 0 1.5px 4px rgba(0,0,0,0.02);
+  padding: 24px 20px;
+  min-width: 220px;
+  max-width: 340px;
+  width: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tareas-container .caja-tarea:hover {
+  background: #3ff5a044;
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.06);
+}
+
+
+
+.tareas-container .botones {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: separate;
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .tareas-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px 4px;
+  }
+  .tareas-container .caja-tarea {
+    min-width: unset;
+    max-width: 100%;
+    padding: 16px 10px;
+  }
+}
+

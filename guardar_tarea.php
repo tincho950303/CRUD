@@ -8,7 +8,7 @@ if (isset($_POST['guardar_tarea'])) {
     $titulo = $_POST['titulo'];
     $descripcion = $_POST['descripcion'];
     
-    // $horaFinal = $_POST['hora-final'];
+   
 
     // Se crea la consulta 
     
@@ -19,6 +19,7 @@ if (isset($_POST['guardar_tarea'])) {
     if(!$resultado){
         die("Falla de consulta");
     }
+
 
     header('Location: index.php');    
     
