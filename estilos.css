@@ -2,10 +2,17 @@
 * {
     box-sizing: border-box;
 }
+:root {
+    --neon-pink: #ff2a6d;
+    --neon-blue: #b3f5f888;
+    --neon-purple: #ea6fd7;
+    --dark-bg: #0e071a;
+    --dark-accent: #1a1b41;
+}
 
 /* Estilos generales del body */
 body {
-    background: #f3f3f3;
+    background: var(--dark-bg);
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -14,7 +21,7 @@ body {
 
 /* Enlaces */
 a {
-    color: #11d7e9;
+    color: var(--neon-pink);
     text-decoration: none;
     font-size: 25px;
 }
@@ -141,7 +148,7 @@ textarea {
   padding: 32px 16px;
 }
 
-.tareas-container .caja-tarea {
+.tareas-container .caja-tarea, form {
   
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.06), 0 1.5px 4px rgba(0,0,0,0.02);
@@ -156,7 +163,7 @@ textarea {
 }
 
 .tareas-container .caja-tarea:hover {
-  background: #3ff5a044;
+  background: var(--neon-blue);
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 8px 24px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.06);
 }

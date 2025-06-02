@@ -5,10 +5,10 @@
        
         <form action="guardar_tarea.php" method="POST">
             <div class="form-group">
-                <input type="text" name="titulo" placeholder="Tarea" autofocus>                
+                <input type="text" name="titulo" placeholder="Tarea" autofocus required>                
             </div>
             <div class="form-group">
-                <textarea name="descripcion" id="" placeholder="Agrega una descripción"></textarea>               
+                <textarea name="descripcion" id="" placeholder="Agrega una descripción" required></textarea>               
             </div>            
             
             <input type="submit" value="Guardar" name="guardar_tarea">
